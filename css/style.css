@@ -82,7 +82,7 @@
 }
 
 
-.card {
+/* .card {
   background-color: #182e76;
   border: 1px solid white;
   padding: 0 !important;
@@ -90,7 +90,7 @@
 .card-body {
   padding: 0 !important;
   margin: 0 !important;
-}
+} */
 @media only screen and (max-width: 600px) {
   .navbar img {
     width: 35%;
