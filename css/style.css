@@ -60,16 +60,14 @@
   border-radius: 10px;
   font-weight:500;
   background-color: green;
-}
-.appointment a{
   color: white;
 }
+
 .appointment:hover{
   background-color: #fdc543;
-}
-.appointment a:hover{
   color: black;
 }
+
 @media only screen and (max-width: 774px) {
   #navbar {
     display: none;
@@ -107,7 +105,7 @@
   }
 }
 /* banner area ---------------------------------- */
-.banner {
+/* .banner { */
   /* background: url("images/banner.jpg") no-repeat; */
   /* background-blend-mode: darken; */
   /* background-size: cover; */
@@ -117,7 +115,7 @@
   padding: 0;
   margin: 0;
   font-weight: bold; */
-}
+/* } */
 .bannersub {
   padding: 2%;
 }
@@ -201,6 +199,9 @@
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   padding: 10px;
   border-radius: 10px;
+}
+.certificate .card .card-body{
+  background-color: #d01119;
 }
 
 .vimi h4 {
@@ -319,10 +320,20 @@
   padding: 10px;
   border-radius: 20px;
   height: 100%;
+  margin: 10px auto;
+}
+.button{
+  background-color: #d01119;
+  font-weight: bold;
+}
+.button:hover{
+  background-color:#243c7d ;
+  color: white;
+  font-weight: bold;
 }
 .conicon h6 {
   font-size: 15px;
-}
+}l
 .conicon a {
   text-decoration: none;
   color: black;
