@@ -62,10 +62,15 @@
   background-color: green;
   color: white;
 }
+.appointment a{
+  color: white;
+}
 
 .appointment:hover{
   background-color: #fdc543;
-  color: black;
+}
+.appointment a:hover{
+  color: #000;
 }
 
 @media only screen and (max-width: 774px) {
@@ -116,6 +121,62 @@
   margin: 0;
   font-weight: bold; */
 /* } */
+/* --------------------------------------
+  Home
+----------------------------------------*/
+.banners {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 80vh;
+}
+/* Overlay effect with black and opacity */
+.banners::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 60% opacity */
+  z-index: 1;
+}
+.carousel-caption {
+  z-index: 2; /* Ensures the text is above the overlay */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centers text horizontally */
+  width: 100%;
+}
+.carousel-caption h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+.carousel-caption h3 {
+  font-size: 20px;
+  color: white;
+}
+.carousel-caption a {
+  background-color: #00c851;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.carousel-caption a:hover {
+  background-color: #007e33;
+}
+.carousel-indicators [data-bs-target]{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #d01119;
+}
 .bannersub {
   padding: 2%;
 }

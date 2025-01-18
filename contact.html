@@ -109,7 +109,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid text-center">
                 <img src="images/logo.png" alt="img" width="20%">
-                <button class="p-2 appointment"><a class="text-decoration-none" href="#appointment">Appointment</a></button>
+                <button class="p-2 appointment" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">Appointment</button>
 
 
                 <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse"
@@ -333,7 +333,7 @@
                     <div class="mb-3">
                         <label for="age" class="form-label">Age</label>
                         <input type="number" class="form-control" id="age" placeholder="Enter your Age" required>
-                      </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
@@ -343,6 +343,18 @@
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="study" class="form-label">Study</label>
+                        <input type="text" class="form-control" id="study">
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="doctor" class="form-label">Preferred Doctor</label>
+                        <input type="text" class="form-control" id="doctor">
                       </div>
                 </div>
                 <div class="col-md-6">
@@ -377,5 +389,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // Booking Appointment
+document.querySelector('#app-form').addEventListener('submit', function(event) {
+ event.preventDefault();
+
+ // Collect form values
+ const name = document.getElementById('name').value;
+ const phone = document.getElementById('phone').value;
+ const age = document.getElementById('age').value;
+ const gender = document.getElementById('gender').value;
+ const study = document.getElementById('study').value;
+ const doctor = document.getElementById('doctor').value;
+ const date = document.getElementById('date').value;
+ const time = document.getElementById('time').value;
+
+ // Create the message
+ const message = `Hello, I would like to book an appointment.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nStudy: ${study}\nDoctor: ${doctor}\nDate: ${date}\nTime: ${time}`;
+
+ // WhatsApp API link with the message and phone number
+ const whatsappUrl = `https://wa.me/8551004444?text=${encodeURIComponent(message)}`;
+
+ // Open WhatsApp with pre-filled message
+ window.open(whatsappUrl, '_blank');
+});
+   </script>
 </body>
 </html>

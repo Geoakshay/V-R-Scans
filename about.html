@@ -86,7 +86,7 @@
                             <a class="nav-link" href="#contact">Contact</a>
                         </li> -->
                     </ul>
-                    <button class="p-2 appointment"><a class="text-decoration-none" href="#appointment">Appointment</a></button>
+                    <button class="p-2 appointment" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">Appointment</button>
                 </div>
             </div>
         </nav>
@@ -113,7 +113,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid text-center">
                 <img src="images/logo.png" alt="img" width="20%">
-                <button class="p-2 appointment"><a class="text-decoration-none" href="#appointment">Appointment</a></button>
+                <button class="p-2 appointment" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">Appointment</button>
 
 
                 <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse"
@@ -352,6 +352,78 @@
     </div>
     <!-- footer area end  -->
 
+     <!-- Appointment Modal -->
+<div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="appointmentModalLabel">Book an Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your Name" required>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your Number" required>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter your Age" required>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Gender</label>
+                        <select class="form-select" id="gender" required>
+                            <option disabled selected>Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="study" class="form-label">Study</label>
+                        <input type="text" class="form-control" id="study">
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="doctor" class="form-label">Preferred Doctor</label>
+                        <input type="text" class="form-control" id="doctor">
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Preferred Time</label>
+                        <input type="time" class="form-control" id="time" required>
+                      </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn" style="background-color: #d01119;color: white;">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -363,6 +435,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        <script>
+            // Booking Appointment
+    document.querySelector('#app-form').addEventListener('submit', function(event) {
+     event.preventDefault();
+   
+     // Collect form values
+     const name = document.getElementById('name').value;
+     const phone = document.getElementById('phone').value;
+     const age = document.getElementById('age').value;
+     const gender = document.getElementById('gender').value;
+     const study = document.getElementById('study').value;
+     const doctor = document.getElementById('doctor').value;
+     const date = document.getElementById('date').value;
+     const time = document.getElementById('time').value;
+   
+     // Create the message
+     const message = `Hello, I would like to book an appointment.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nStudy: ${study}\nDoctor: ${doctor}\nDate: ${date}\nTime: ${time}`;
+   
+     // WhatsApp API link with the message and phone number
+     const whatsappUrl = `https://wa.me/8551004444?text=${encodeURIComponent(message)}`;
+   
+     // Open WhatsApp with pre-filled message
+     window.open(whatsappUrl, '_blank');
+   });
+       </script>
         <!-- Add Lightbox2 Initialization -->
 <script>
   lightbox.option({
