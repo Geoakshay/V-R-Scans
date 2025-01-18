@@ -20,6 +20,7 @@
         <!-- style  -->
          <link href="css/style.css" rel="stylesheet">
         <link href="css/gallery.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/animate.css">
     </head>
 <body class="bg-light">
 
@@ -150,13 +151,17 @@
           <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
         </symbol>
       </svg>
- 
-        <h1 class="text-center mt-3 mb-0 bg-light text-dark">Explore Our Gallery</h1>
-        <p class="text-center bg-light text-dark">Click an image to reveal the lightbox</p>
+
+      <div class="main pt-4 wow fadeInUp">
+        <h2 class="text-dark">Explore Our Gallery</h2>
+        <img src="images/divider.png" alt="img" width="20%">
+    </div>
+   
+        <!-- <p class="text-center bg-light text-dark wow fadeInUp">Click an image to reveal the lightbox</p> -->
 
      
       
-      <section class="photo-gallery bg-light p-5">
+      <section class="photo-gallery bg-light p-5 wow fadeInUp">
         <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 gallery-grid">
             <div class="col">
@@ -257,17 +262,17 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-3 text-justify p-3 foot">
                 <h4>Quick Links</h4>
-                <a href="#about">
-                    <p><i class="fa-solid fa-circle-dot"></i> About Us</p>
+                <a href="index.html">
+                    <p><i class="fa-solid fa-circle-dot"></i> Home</p>
                 </a>
-                <a href="#contact">
-                    <p><i class="fa-solid fa-circle-dot"></i> Contact Us</p>
+                <a href="about.html">
+                    <p><i class="fa-solid fa-circle-dot"></i> About</p>
                 </a>
-                <a href="#service">
+                <a href="service.html">
                     <p><i class="fa-solid fa-circle-dot"></i> Services</p>
                 </a>
-                <a href="#gallery">
-                    <p><i class="fa-solid fa-circle-dot"></i> Gallery</p>
+                <a href="contact.html">
+                    <p><i class="fa-solid fa-circle-dot"></i> Contact</p>
                 </a>
             </div>
             <div class="col-lg-4 p-3 foot">
@@ -378,6 +383,11 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="js/gallery.js"></script>
+
+<script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
 <script>
   // Booking Appointment
 document.querySelector('#app-form').addEventListener('submit', function(event) {
@@ -397,7 +407,7 @@ const time = document.getElementById('time').value;
 const message = `Hello, I would like to book an appointment.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nStudy: ${study}\nDoctor: ${doctor}\nDate: ${date}\nTime: ${time}`;
 
 // WhatsApp API link with the message and phone number
-const whatsappUrl = `https://wa.me/8551004444?text=${encodeURIComponent(message)}`;
+const whatsappUrl = `https://wa.me/9043863855?text=${encodeURIComponent(message)}`;
 
 // Open WhatsApp with pre-filled message
 window.open(whatsappUrl, '_blank');

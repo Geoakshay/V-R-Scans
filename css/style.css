@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -139,7 +140,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black color with 60% opacity */
+  background-color: rgba(0, 0, 0, 0.6); /* Black color with 60% opacity */
   z-index: 1;
 }
 .carousel-caption {
@@ -153,9 +154,19 @@
 }
 .carousel-caption h2 {
   font-size: 50px;
-  text-transform: uppercase;
-  font-weight: bold;
+  font-family: "Poppins", serif;
+  font-style: italic;
+  text-transform: capitalize;
   color: white;
+}
+@media screen and (min-width:900px){
+  .carousel-caption h2 {
+    font-size: 70px;
+    font-family: "Poppins", serif;
+  font-style: italic;
+    text-transform: capitalize;
+    color: white;
+  }
 }
 .carousel-caption h3 {
   font-size: 20px;

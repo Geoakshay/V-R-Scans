@@ -19,6 +19,7 @@
 
         <!-- style  -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
     </head>
 <body>
     <div class="whats_pin">
@@ -159,16 +160,16 @@
     <!-- who we sre start  -->
     <div class="container mt-5" id="about">
         <div class="main">
-            <h2>WHO WE ARE</h2>
+            <h2 class="wow fadeInUp">WHO WE ARE</h2>
             <img src="images/divider.png" alt="img" width="20%">
         </div>
         <div class="row">
-            <div class="col-lg-6 mt-3 ">
+            <div class="col-lg-6 mt-3 wow fadeInLeft">
                 <div class="mt-5">
                     <img src="images/whowe.png" alt="img" width="100%">
                 </div>
             </div>
-            <div class="col-lg-6 para mt-3">
+            <div class="col-lg-6 para mt-3 wow fadeInRight">
                 <p>In the heart of our journey lies a tale spun by destiny's hand, a tale that began as a whisper in the
                     mind of Dr. A. Vijay Anand. United by a vision and driven by an unyielding passion for healthcare
                     and an
@@ -195,7 +196,7 @@
             <div class="col-lg-2">
 
             </div>
-            <div class="col-lg-4 mt-3">
+            <div class="col-lg-4 mt-3 wow fadeInUp">
                 <div class="vimi">
                     <div class="d-flex justify-content-center">
                         <img src="images/mission.png" alt="" width="20%">
@@ -206,7 +207,7 @@
                     <br>
                 </div>
             </div>
-            <div class="col-lg-4 mt-3">
+            <div class="col-lg-4 mt-3 wow fadeInUp">
                 <div class="vimi">
                     <div class="d-flex justify-content-center">
                         <img src="images/vision.png" alt="" width="20%">
@@ -226,58 +227,58 @@
 
    <!-- Certification Start -->
 <div class="container mt-5">
-  <div class="main">
+  <div class="main wow fadeInUp">
       <h2>Certifications</h2>
       <img src="images/divider.png" alt="img" width="20%">
   </div>
   <div class="main">
       <div class="row">
-          <div class="col-md-6 p-5">
+          <div class="col-md-6 p-5 wow fadeInLeft">
               <div class="certificate" style="width: 100%;">
                   <div class="card" style="height: auto;width: 100%;">
                       <a href="images/certificate/post-graduate1.jpg" data-lightbox="certificates" data-title="Diploma in Post Graduate">
                           <img src="images/certificate/post-graduate1.jpg" style="height: 60vh;width: 100%;" class="card-img-top img-fluid" alt="Diploma in Post Graduate">
                       </a>
                       <div class="card-body">
-                          <h5 class="card-title">Post Graduate Diploma in Medical - Diagnosis</h5>
+                          <h5 class="card-title text-light">Post Graduate Diploma in Medical - Diagnosis</h5>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-md-6 p-5">
+          <div class="col-md-6 p-5 wow fadeInRight">
               <div class="certificate" style="width: 100%;">
                   <div class="card" style="height: auto;width: 100%;">
                       <a href="images/certificate/EDIR.jpg" data-lightbox="certificates" data-title="European Diploma in Radiology">
                           <img src="images/certificate/EDIR.jpg" style="height: 60vh;width: 100%;" class="card-img-top img-fluid" alt="European Diploma in Radiology">
                       </a>
                       <div class="card-body">
-                          <h5 class="card-title">European Diploma in Radiology</h5>
+                          <h5 class="card-title text-light">European Diploma in Radiology</h5>
                       </div>
                   </div>
               </div>
           </div>
       </div>
       <div class="row">
-          <div class="col-md-6 p-5">
+          <div class="col-md-6 p-5 wow fadeInLeft">
               <div class="certificate" style="width: 100%;">
                   <div class="card" style="height: auto;width: 100%;">
                       <a href="images/certificate/MBBS_page-0001.jpg" data-lightbox="certificates" data-title="Bachelor of Medicine & Bachelor of Surgery">
                           <img src="images/certificate/MBBS_page-0001.jpg" style="height: 60vh;width: 100%;" class="card-img-top img-fluid" alt="Bachelor of Medicine & Bachelor of Surgery">
                       </a>
                       <div class="card-body">
-                          <h5 class="card-title">Bachelor of Medicine & Bachelor of Surgery</h5>
+                          <h5 class="card-title text-light">Bachelor of Medicine & Bachelor of Surgery</h5>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-md-6 p-5">
+          <div class="col-md-6 p-5 wow fadeInRight">
               <div class="certificate" style="width: 100%;">
                   <div class="card" style="height: auto;width: 100%;">
                       <a href="images/certificate/safety.jpg" data-lightbox="certificates" data-title="Approval of Radiological Safety Officer">
                           <img src="images/certificate/safety.jpg" style="height: 60vh;width: 100%;" class="card-img-top img-fluid" alt="Approval of Radiological Safety Officer">
                       </a>
                       <div class="card-body">
-                          <h5 class="card-title">Approval of Radiological Safety Officer</h5>
+                          <h5 class="card-title text-light">Approval of Radiological Safety Officer</h5>
                       </div>
                   </div>
               </div>
@@ -292,7 +293,7 @@
     <!-- footer area start  -->
     <br>
     <br>
-    <div class="container-fluid footer">
+    <div class="container-fluid footer wow fadeInUp">
         <div class="row">
             <div class="col-lg-4 p-3 foot">
                 <div class="d-flex justify-content-center">
@@ -435,6 +436,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
         <script>
             // Booking Appointment
     document.querySelector('#app-form').addEventListener('submit', function(event) {
@@ -454,7 +459,7 @@
      const message = `Hello, I would like to book an appointment.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nStudy: ${study}\nDoctor: ${doctor}\nDate: ${date}\nTime: ${time}`;
    
      // WhatsApp API link with the message and phone number
-     const whatsappUrl = `https://wa.me/8551004444?text=${encodeURIComponent(message)}`;
+     const whatsappUrl = `https://wa.me/9043863855?text=${encodeURIComponent(message)}`;
    
      // Open WhatsApp with pre-filled message
      window.open(whatsappUrl, '_blank');

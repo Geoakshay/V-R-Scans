@@ -18,7 +18,7 @@
   const message = `Hello, I would like to book an appointment.\n\nDetails:\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nStudy: ${study}\nDoctor: ${doctor}\nDate: ${date}\nTime: ${time}`;
 
   // WhatsApp API link with the message and phone number
-  const whatsappUrl = `https://wa.me/8551004444?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/9043863855?text=${encodeURIComponent(message)}`;
 
   // Open WhatsApp with pre-filled message
   window.open(whatsappUrl, '_blank');
